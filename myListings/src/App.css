@@ -56,14 +56,91 @@
 }
 
 .add-listing-btn:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838;
 }
 
 .add-listing-btn:active {
-  background-color: #1e7e34; /* Even darker green on click */
-  transform: scale(0.98); /* Slight button press effect */
+  background-color: #1e7e34;
+  transform: scale(0.98);
 }
 
+h1 {
+  color: #333;
+}
 
+.add-listing-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
 
+.add-listing-btn:hover {
+  background-color: #45a049;
+}
 
+/* Form Container */
+.listing-form {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 400px;
+  margin: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out; /* Smooth slide-down animation */
+}
+
+/* Form Elements */
+.listing-form h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.listing-form input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.listing-form input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for Form */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
