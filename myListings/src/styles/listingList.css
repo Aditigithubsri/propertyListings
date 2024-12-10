@@ -1,0 +1,27 @@
+.add-date-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .add-date-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .add-date-btn:active {
+    background-color: #1e7e34; /* Even darker green on click */
+    transform: scale(0.98); /* Slight button press effect */
+  }
+  .listing-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  

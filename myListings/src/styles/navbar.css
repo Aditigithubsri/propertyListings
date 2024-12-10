@@ -1,0 +1,32 @@
+.navbar {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin: 0 15px;
+  }
+  
+  .navbar-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .navbar-item a:hover {
+    text-decoration: underline;
+  }
+  
