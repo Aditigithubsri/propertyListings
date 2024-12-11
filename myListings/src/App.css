@@ -44,8 +44,8 @@
   display: block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #28a745; /* Green background */
-  color: white; /* White text */
+  background-color: #28a745;
+  color: white;
   font-size: 16px;
   border: none;
   border-radius: 5px;
@@ -92,7 +92,7 @@ h1 {
   max-width: 400px;
   margin: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  animation: slideDown 0.3s ease-out; /* Smooth slide-down animation */
+  animation: slideDown 0.3s ease-out;
 }
 
 /* Form Elements */
@@ -143,4 +143,223 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.people-info-card {
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
+
+.people-info-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.people-info-card p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.people-info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.people-info-card li {
+  font-size: 14px;
+  color: red;
+  cursor: pointer;
+}
+
+.people-info-card li:hover {
+  text-decoration: underline;
+}
+.display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.date-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.date-card {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 500px;
+}
+
+.date-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.date-details .date {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.date-details .day,
+.date-details .time {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Buttons for edit and delete */
+.date-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.date-actions button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.date-actions button.delete {
+  background-color: grey;
+}
+
+.date-actions button:hover {
+  opacity: 0.9;
+}
+
+.date-actions button:active {
+  transform: scale(0.97);
+}
+.date-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.add-date-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-date-btn:hover {
+  background-color: #4caf50;
+}
+
+.add-date-btn:active {
+  background-color: #4caf50;
+  transform: scale(0.98);
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: grey;
+  color: white;
+}
+
+.delete-btn {
+  background-color: grey;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: grey;
+}
+
+.delete-btn:hover {
+  background-color: grey;
+}
+/* Container for all Kit Cards */
+.kit-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+/* Style for individual Kit Card */
+.kit-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Hover effect for Kit Card */
+.kit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading style */
+.kit-card h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Link styles inside the card */
+.kit-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.kit-card a:hover {
+  text-decoration: underline;
+}
+
+/* Button style */
+.kit-card button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.kit-card button:hover {
+  background-color: #218838;
+}
+
+.kit-card button:active {
+  background-color: #1e7e34;
+  transform: scale(0.98);
 }

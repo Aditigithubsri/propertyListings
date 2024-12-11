@@ -2,19 +2,28 @@ import React from "react";
 
 function ListingCard({ listing }) {
   return (
-    <div className="listing-card">
-      <h2>{listing.address}</h2>
-      <p><strong>Date:</strong> {listing.date}</p>
-      <p><strong>Time:</strong> {listing.time}</p>
-      <p><strong>Price:</strong> {listing.price}</p>
-      <p><strong>Highlights:</strong> {listing.highlights}</p>
-      <div>
-        <h3>Agent Information:</h3>
-        <p><strong>Name:</strong> {listing.agent.name}</p>
-        <p><strong>Phone:</strong> {listing.agent.phone}</p>
-        <p><strong>Email:</strong> {listing.agent.email}</p>
+    <div className="listing-list">
+    {listing.map((listing, index) => (
+      <div className="card" key={index}>
+        <img src={listing.image} alt={`Image for ${listing.address}`} className="card-image" />
+        <div className="card-content">
+          <h3>{listing.address}</h3>
+          <p>
+            <strong>Date:</strong> {listing.date} <br />
+            <strong>Time:</strong> {listing.time} <br />
+            <strong>Price:</strong> ${listing.price} <br />
+            <strong>Highlights:</strong> {listing.highlights}
+          </p>
+          <div>
+            <strong>Agent:</strong> {listing.agent.name} <br />
+            <strong>Phone:</strong> {listing.agent.phone} <br />
+            <strong>Email:</strong> {listing.agent.email}
+          </div>
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+  
   );
 }
 

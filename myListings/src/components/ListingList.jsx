@@ -55,12 +55,6 @@ function ListingList({ listings }) {
           <p>
             <strong>Agent:</strong> {listing.agent.name} - {listing.agent.phone}
           </p>
-          <button
-            className="add-date-btn"
-            onClick={() => openModal(index)}
-          >
-            + Add Date
-          </button>
         </div>
       ))}
 
