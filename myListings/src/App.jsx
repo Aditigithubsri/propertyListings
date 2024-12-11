@@ -49,7 +49,7 @@ function App() {
       image: "https://www.google.com/imgres?q=images%20of%20hotels&imgurl=https%3A%2F%2F3.imimg.com%2Fdata3%2FJV%2FKJ%2FMY-15827078%2Fhotels-booking.jpg&imgrefurl=https%3A%2F%2Fwww.indiamart.com%2Fproddetail%2Fhotels-booking-9236381788.html&docid=faScx0k6pvIPqM&tbnid=59B4NXtob0KKzM&vet=12ahUKEwjZj7HJmp-KAxUEyzgGHaqCOe4QM3oECBgQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwjZj7HJmp-KAxUEyzgGHaqCOe4QM3oECBgQAA", // Replace with actual image URL
     },
   ]);
-  
+
 
   const [newListing, setNewListing] = useState({
     address: "",
@@ -107,122 +107,136 @@ function App() {
   return (
     <div className="App">
       <SelectSeries />
-      <button
-        className="add-listing-btn"
-        onClick={() => setShowForm((prev) => !prev)}
-      >
-        {showForm ? "Close Form" : "+ Add New Listing"}
-      </button>
-      {showForm && (
-        <div className="listing-form">
-          <h2>Add New Listing</h2>
-          <input
-            type="text"
-            name="address"
-            placeholder="Address"
-            value={newListing.address}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="date"
-            placeholder="Date"
-            value={newListing.date}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="time"
-            placeholder="Time"
-            value={newListing.time}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="price"
-            placeholder="Price"
-            value={newListing.price}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="highlights"
-            placeholder="Highlights"
-            value={newListing.highlights}
-            onChange={handleInputChange}
-          />
-          <h3>Agent Information</h3>
-          <input
-            type="text"
-            name="agent.name"
-            placeholder="Agent Name"
-            value={newListing.agent.name}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="agent.phone"
-            placeholder="Agent Phone"
-            value={newListing.agent.phone}
-            onChange={handleInputChange}
-          />
-          <input
-            type="email"
-            name="agent.email"
-            placeholder="Agent Email"
-            value={newListing.agent.email}
-            onChange={handleInputChange}
-          />
-          <button className="submit-btn" onClick={handleAddListing}>
-            Add Listing
+      <div className="screen">
+        <button
+          className="add-listing-btn"
+          onClick={() => setShowForm((prev) => !prev)}
+        >
+          {showForm ? "Close Form" : "+ Add New Listing"}
+        </button>
+        {showForm && (
+          <div className="listing-form">
+            <h2>Add New Listing</h2>
+            <input
+              type="text"
+              name="address"
+              placeholder="Address"
+              value={newListing.address}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="date"
+              placeholder="Date"
+              value={newListing.date}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="time"
+              placeholder="Time"
+              value={newListing.time}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="price"
+              placeholder="Price"
+              value={newListing.price}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="highlights"
+              placeholder="Highlights"
+              value={newListing.highlights}
+              onChange={handleInputChange}
+            />
+            <h3>Agent Information</h3>
+            <input
+              type="text"
+              name="agent.name"
+              placeholder="Agent Name"
+              value={newListing.agent.name}
+              onChange={handleInputChange}
+            />
+            <input
+              type="text"
+              name="agent.phone"
+              placeholder="Agent Phone"
+              value={newListing.agent.phone}
+              onChange={handleInputChange}
+            />
+            <input
+              type="email"
+              name="agent.email"
+              placeholder="Agent Email"
+              value={newListing.agent.email}
+              onChange={handleInputChange}
+            />
+            <button className="submit-btn" onClick={handleAddListing}>
+              Add Listing
+            </button>
+          </div>
+
+
+        )}
+
+        <div>
+
+          <button className="slack-btn" onClick={handleAddListing}>
+            Add Ed As Partner Agent
+          </button>
+          <button className="slack-btn" onClick={handleAddListing}>
+            Share Kits On Slack
           </button>
         </div>
-      )}
+      </div>
 
       <Navbar />
       <div className="display">
-      <ListingList listings={listings} />
-       {/* Display DateCard between the two cards */}
-       <div className="date-cards">
-        {listings.map((listing, index) => (
-          <DateCard
-            key={index}
-            date={listing.date}
-            day={new Date(listing.date).toLocaleDateString("en-US", {
-              weekday: "long",
-            })}
-            time={listing.time}
-            onEdit={() => handleEditDate(index)}
-            onDelete={() => handleDeleteDate(index)}
-          />
-          
-        ))}
-          
-      </div>
-      <div className="people-info-cards">
-  {listings.map((listing, index) => (
-    <PeopleInfoCard
-      key={index}
-      name={listing.agent.name}
-      contact={listing.agent.phone}
-      email={listing.agent.email}
-      options={["Remove Agent"]}
-    />
-  ))}
+        <ListingList listings={listings} />
+        {/* Display DateCard between the two cards */}
+        <div className="date-cards">
+          {listings.map((listing, index) => (
+            <DateCard
+              key={index}
+              date={listing.date}
+              day={new Date(listing.date).toLocaleDateString("en-US", {
+                weekday: "long",
+              })}
+              time={listing.time}
+              onEdit={() => handleEditDate(index)}
+              onDelete={() => handleDeleteDate(index)}
+            />
 
-    </div>
-    <div className="kit-cards-container">
-  {/* KitCard */}
-  {listings.map((listing, index) => (
-    <Kit
-      key={index}
-      kitLink
-      basicKitLink
-      onRegenerate={() => console.log("Regenerate Kit for listing:", index)}
-    />
-  ))}
-</div>
-    </div>
+          ))}
+
+        </div>
+        <div className="people-info-cards">
+          {listings.map((listing, index) => (
+            <PeopleInfoCard
+              key={index}
+              name={listing.agent.name}
+              contact={listing.agent.phone}
+              email={listing.agent.email}
+              options={["Remove Agent"]}
+            />
+          ))}
+
+        </div>
+        <div className="kit-cards-container">
+          {/* KitCard */}
+          {listings.map((listing, index) => (
+            <Kit
+              key={index}
+              kitLink
+              basicKitLink
+              onRegenerate={() => console.log("Regenerate Kit for listing:", index)}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
