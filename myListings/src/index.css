@@ -21,7 +21,7 @@ h1 {
 .listing-card h2 {
   grid-column: span 2;
   margin: 0 0 10px;
-  color: blue;
+  color: #27285c;
   font-size: 20px;
 }
 

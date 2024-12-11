@@ -184,10 +184,10 @@ function App() {
 
         <div>
 
-          <button className="slack-btn" onClick={handleAddListing}>
+          <button className="slack-btn" >
             Add Ed As Partner Agent
           </button>
-          <button className="slack-btn" onClick={handleAddListing}>
+          <button className="slack-btn">
             Share Kits On Slack
           </button>
         </div>
